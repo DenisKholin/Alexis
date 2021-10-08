@@ -1,0 +1,15 @@
+@mixin subtitle {
+	&::after {
+		content: "We understand your requirement and provide quality works.";
+		display: block;
+		color: $color-10;
+		font-size: 1.8rem;
+		font-family: "Poppins", sans-serif;
+		font-weight: 400;
+		margin-top: 4rem;
+	}
+}
+
+@mixin shadow {
+	box-shadow: 0 0 2rem rgba(0, 0, 0, 0.05);
+}

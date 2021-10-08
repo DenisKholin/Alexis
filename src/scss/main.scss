@@ -1,0 +1,60 @@
+@import "partials/params";
+@import "partials/mixins";
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	font-variant-ligatures: none;
+}
+
+html,
+body {
+	font-size: 62.5%;
+	margin: 0;
+	padding: 0;
+	text-rendering: optimizeLegibility;
+	overflow-x: hidden;
+	font-family: "Poppins", sans-serif;
+
+	@media screen and (max-width: $large-size) {
+		font-size: 50%;
+	}
+}
+
+ul {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+h1 {
+	text-align: center;
+	font-size: 6rem;
+	line-height: 8.5rem;
+	font-family: "Libre Baskerville", serif;
+	font-weight: 400;
+	color: $color-9;
+	margin-bottom: 4.5rem;
+
+	@media screen and (max-width: $semi-medium-size) {
+		font-size: 3.5rem;
+		line-height: 6rem;
+	}
+}
+
+h2 {
+	font-size: 5rem;
+	font-family: "Libre Baskerville", serif;
+	font-weight: 700;
+	color: $color-7;
+	@include subtitle;
+}
+
+section,
+header {
+	padding-left: 1%;
+	padding-right: 1%;
+}

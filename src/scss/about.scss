@@ -1,0 +1,54 @@
+@import "partials/params";
+@import "partials/mixins";
+
+.about {
+	padding: 15rem 0;
+	max-width: 114rem;
+	margin: 0 auto;
+
+	&__block {
+		height: 70rem;
+		background-image: url(src/img/about.png);
+		background-repeat: no-repeat;
+		display: flex;
+		justify-content: flex-end;
+		align-items: center;
+	}
+
+	&__box {
+		@include shadow;
+		width: 65rem;
+		position: relative;
+		background-color: $color-9;
+		padding: 0.5rem;
+		background: $color-9
+			linear-gradient(
+				90deg,
+				$color-5 0,
+				$color-5 25%,
+				$color-2 26%,
+				$color-2 50%,
+				$color-3 51%,
+				$color-3 75%,
+				$color-4 76%,
+				$color-4 100%
+			)
+			no-repeat bottom/ 100% 0.3rem;
+	}
+
+	&__img {
+		position: absolute;
+	}
+
+	&__title {
+		margin: 9.5rem 0 4rem 8rem;
+	}
+
+	&__text {
+		font-size: 1.5rem;
+		font-weight: 400;
+		color: $color-10;
+		max-width: 49rem;
+		margin: 0 auto 10rem;
+	}
+}

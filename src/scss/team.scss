@@ -1,0 +1,270 @@
+@import "partials/params";
+@import "partials/mixins";
+
+.team {
+	background-color: $color-8;
+
+	&__inner {
+		max-width: 114rem;
+		margin: 0 auto;
+		padding-bottom: 15rem;
+	}
+
+	&__title {
+		text-align: center;
+		margin-bottom: 8rem;
+
+		&::before {
+			content: url(src/img/04.png);
+			display: block;
+			margin-bottom: -8rem;
+		}
+	}
+
+	&__block {
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 5rem;
+
+		@media screen and (max-width: $big-size) {
+			flex-direction: column;
+			align-items: center;
+		}
+	}
+
+	&__box {
+		max-width: 26.3rem;
+		height: 35rem;
+		background-color: $color-9;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		@include shadow;
+
+		@media screen and (max-width: $big-size) {
+			margin-bottom: 4rem;
+		}
+
+		&_1 {
+			border-bottom: 0.3rem solid $color-5;
+			color: $color-5;
+		}
+
+		&_2 {
+			border-bottom: 0.3rem solid $color-2;
+			color: $color-2;
+		}
+
+		&_3 {
+			border-bottom: 0.3rem solid $color-3;
+			color: $color-3;
+		}
+
+		&_4 {
+			border-bottom: 0.3rem solid $color-4;
+			color: $color-4;
+		}
+
+		&_name {
+			font-size: 1.8rem;
+			font-weight: 500;
+			margin: 1rem 0 0.5rem;
+		}
+
+		&_work {
+			font-size: 1.3rem;
+			color: $color-7;
+		}
+
+		&_img {
+			max-width: 26.3rem;
+			max-height: 27rem;
+		}
+	}
+
+	&__quote {
+		width: 100%;
+		min-height: 35rem;
+		padding: 7.5rem 10rem 8rem;
+		background-color: $color-9;
+		position: relative;
+		z-index: 15;
+		@include shadow;
+
+		@media screen and (max-width: $small-size) {
+			padding: 2rem;
+		}
+
+		&::before {
+			content: "";
+			display: block;
+			// width: 5rem;
+			// height: 5rem;
+			// transform: rotate(45deg);
+			// background-color: $color-9;
+			position: absolute;
+			// @include shadow;
+			top: -4rem;
+			// z-index: -10;
+			width: 0;
+			height: 0;
+			border-left: 2.5rem solid transparent;
+			border-right: 2.5rem solid transparent;
+			border-bottom: 4rem solid $color-9;
+
+			@media screen and (max-width: $big-size) {
+				left: 48%;
+			}
+		}
+
+		&_author {
+			font-weight: 500;
+			font-size: 2rem;
+			color: $color-1;
+			margin-bottom: 3.5rem;
+
+			@media screen and (max-width: $big-size) {
+				text-align: center;
+			}
+		}
+
+		&_block {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+
+			@media screen and (max-width: $big-size) {
+				flex-direction: column;
+			}
+		}
+
+		&_text {
+			max-width: 64rem;
+			font-size: 1.5rem;
+			color: $color-10;
+
+			@media screen and (max-width: $big-size) {
+				margin-bottom: 3rem;
+			}
+		}
+
+		&_social {
+			width: 20rem;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+		}
+
+		&_social-block {
+			display: flex;
+			flex-direction: column;
+			border-left: 0.2rem solid $color-12;
+			padding-left: 2.5rem;
+		}
+
+		&_social-link {
+			display: flex;
+			align-items: center;
+			justify-content: start;
+			font-size: 1.5rem;
+			color: $color-10;
+			margin-bottom: 0.7rem;
+		}
+
+		&_facebook {
+			margin-right: 0.5rem;
+		}
+	}
+
+	&__advantages {
+		background-image: url(src/img/team_bg.png);
+		// background-attachment: fixed;
+		background-position: bottom;
+		padding: 13.5rem 0 13rem;
+
+		&_block {
+			max-width: 114rem;
+			margin: 0 auto;
+			display: flex;
+			justify-content: space-around;
+		}
+
+		&_box {
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			align-items: center;
+			height: 20rem;
+		}
+
+		&_statistic {
+			font-size: 2rem;
+			font-weight: 500;
+			color: $color-9;
+		}
+
+		&_text {
+			font-size: 1.5rem;
+			color: $color-9;
+			font-weight: 400 !important;
+			text-align: center;
+		}
+
+		&_circle {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 1.5rem;
+			height: 1.5rem;
+			border-radius: 50rem;
+			background: transparent;
+			border: 0.2rem solid;
+
+			&::after {
+				content: "";
+				display: block;
+				width: 0.9rem;
+				height: 0.9rem;
+				border-radius: 50rem;
+			}
+
+			&-1 {
+				border-color: $color-5;
+
+				&::after {
+					background-color: $color-5;
+				}
+			}
+
+			&-2 {
+				border-color: $color-2;
+
+				&::after {
+					background-color: $color-2;
+				}
+			}
+
+			&-3 {
+				border-color: $color-3;
+
+				&::after {
+					background-color: $color-3;
+				}
+			}
+
+			&-4 {
+				border-color: $color-4;
+
+				&::after {
+					background-color: $color-4;
+				}
+			}
+		}
+	}
+}
+
+#team {
+	padding-right: 0%;
+	padding-left: 0%;
+}

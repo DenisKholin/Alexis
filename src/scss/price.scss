@@ -1,0 +1,122 @@
+@import "partials/params";
+@import "partials/mixins";
+
+.price {
+	background-color: $color-8;
+
+	&__inner {
+		max-width: 114rem;
+		margin: 0 auto;
+		padding-bottom: 15rem;
+	}
+
+	&__title {
+		text-align: center;
+		margin-bottom: 8rem;
+
+		&::before {
+			content: url(src/img/06.png);
+			display: block;
+			margin-bottom: -8rem;
+		}
+	}
+
+	&__block {
+		display: flex;
+		justify-content: space-between;
+
+		@media screen and (max-width: $big-size) {
+			flex-direction: column;
+			align-items: center;
+		}
+	}
+
+	&__box {
+		@include shadow;
+		width: 36rem;
+		height: 57rem;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-evenly;
+		align-items: center;
+		border-top: 0.3rem solid;
+
+		@media screen and (max-width: $big-size) {
+			margin-bottom: 5rem;
+		}
+
+		&_1 {
+			border-color: $color-2;
+		}
+
+		&_2 {
+			border-color: $color-5;
+		}
+
+		&_3 {
+			border-color: $color-3;
+		}
+
+		&_title {
+			font-size: 2rem;
+			font-weight: 500;
+			color: $color-7;
+			text-align: center;
+		}
+
+		&_text {
+			font-size: 1.5rem;
+			color: $color-10;
+			text-align: center;
+			line-height: 2rem;
+		}
+
+		&_btn {
+			width: 18rem;
+			height: 5rem;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			text-transform: uppercase;
+			font-weight: 600;
+			font-size: 1.6rem;
+			background: transparent;
+			border: 0.2rem solid;
+			border-radius: 50rem;
+			transition: 0.5s;
+
+			&-1 {
+				border-color: $color-2;
+				color: $color-2;
+
+				&:hover,
+				&:active {
+					background-color: $color-2;
+					color: $color-9;
+				}
+			}
+
+			&-2 {
+				border-color: $color-5;
+				color: $color-5;
+
+				&:hover,
+				&:active {
+					background-color: $color-5;
+					color: $color-9;
+				}
+			}
+
+			&-3 {
+				border-color: $color-3;
+				color: $color-3;
+
+				&:hover,
+				&:active {
+					background-color: $color-3;
+					color: $color-9;
+				}
+			}
+		}
+	}
+}
